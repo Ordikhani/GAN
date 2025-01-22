@@ -1,1 +1,19 @@
+import networkx as nx
+import matplotlib.pyplot as plt
+
+
+G = nx.Graph()
+G.add_edges_from([
+    ('A', 'B'), 
+    ('A', 'C'), 
+    ('B', 'D'), 
+    ('B', 'E'), 
+    ('C', 'F'), 
+    ('C', 'G')
+])
+
+plt.figure(figsize=(8, 6))
+nx.draw(G, with_labels=True, node_color='skyblue', node_size=700, edge_color='gray', font_size=12)
+plt.title("Undirected Graph")
+plt.show()
 
